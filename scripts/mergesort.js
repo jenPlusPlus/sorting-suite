@@ -16,7 +16,7 @@ function mergeSort(numArray) {
 function combineArrays(arr1, arr2) {
   let combinedArray = [];
 
-   while(arr1.length && arr2.length){
+  while(arr1.length && arr2.length){
     if(arr1[0] <= arr2[0]) {
       combinedArray.push(arr1.shift());
     } else {
