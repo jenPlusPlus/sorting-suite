@@ -5,8 +5,8 @@ function mergeSort(numArray) {
   if (numArray.length < 2) {
     return numArray;
   } else {
-    splitArray1 = numArray.slice(0, Math.floor(numArray.length/2));
-    splitArray2 = numArray.slice(Math.floor(numArray.length/2), numArray.length);
+    splitArray1 = numArray.slice(0, mid);
+    splitArray2 = numArray.slice(mid, numArray.length);
   }
 
   return combineArrays(mergeSort(splitArray1), mergeSort(splitArray2));
