@@ -3,7 +3,7 @@ import { expect } from 'chai';
 import { mergeSort, combineArrays } from '../scripts/mergesort.js'
 import randomArrayLength from '../randomNumGenNoRepeat.js'
 import genRandomLettersArray from '../randomLetterGen.js'
-import getRandomIntInclusive from '../randomNegNumGen.js'
+import getRandomIntInclusive from '../randomNumGen.js'
 
 describe('mergesort', () => {
   var randomArray = [];
@@ -84,7 +84,7 @@ describe('mergesort', () => {
     }
   })
 
-  it('Should sort an array containing two positive numbers (no repeats)', () => {
+  it('Should sort an array containing two negative numbers (no repeats)', () => {
     randomArray = randomArrayLength(-2);
     let sortedArray = mergeSort(randomArray);
     for(let i = 0; i<sortedArray.length; i++){
@@ -92,7 +92,7 @@ describe('mergesort', () => {
     }
   })
 
-  it('Should sort an array containing a few positive numbers (no repeats)', () => {
+  it('Should sort an array containing a few negative numbers (no repeats)', () => {
     randomArray = randomArrayLength(-50);
     let sortedArray = mergeSort(randomArray);
     for(let i = 0; i<sortedArray.length; i++){
@@ -100,7 +100,7 @@ describe('mergesort', () => {
     }
   })
 
-  it('Should sort an array containing many positive numbers (no repeats)', () => {
+  it('Should sort an array containing many negative numbers (no repeats)', () => {
     randomArray = randomArrayLength(-5000);
     let sortedArray = mergeSort(randomArray);
     for(let i = 0; i<sortedArray.length; i++){
@@ -108,7 +108,7 @@ describe('mergesort', () => {
     }
   })
 
-  it('Should sort an array containing two positive numbers (with repeats)', () => {
+  it('Should sort an array containing two negative numbers (with repeats)', () => {
     for(let i=0; i<2; i++){
       randomArray.push(getRandomIntInclusive(-1,-1));
     }
@@ -118,7 +118,7 @@ describe('mergesort', () => {
     }
   })
 
-  it('Should sort an array containing a few positive numbers (with repeats)', () => {
+  it('Should sort an array containing a few negative numbers (with repeats)', () => {
     for(let i=0; i<50; i++){
       randomArray.push(getRandomIntInclusive(-25,-1));
     }
@@ -128,7 +128,7 @@ describe('mergesort', () => {
     }
   })
 
-  it('Should sort an array containing many positive numbers (with repeats)', () => {
+  it('Should sort an array containing many negative numbers (with repeats)', () => {
     for(let i=0; i<5000; i++){
       randomArray.push(getRandomIntInclusive(-100,-1));
     }
